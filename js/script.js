@@ -10,7 +10,22 @@ createApp({
             date: new Date(),
             img: 'https://picsum.photos/300',
             imgInfo: 'Random pic',
-            checked: []
+            checked: [],
+            items: ['Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato', 'Domenica'],
+            images: [
+                {
+                    id: 1,
+                    url: 'https://picsum.photos/300?random=1'
+                },
+                {
+                    id: 2,
+                    url: 'https://picsum.photos/300?random=2'
+                },
+                {
+                    id: 3,
+                    url: 'https://picsum.photos/300?random=3'
+                }
+            ]   
         }
     },
     methods: {
