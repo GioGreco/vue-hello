@@ -4,6 +4,27 @@
     box-sizing: border-box;
 }
 
+#app > *{
+    height: 250px;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+/* #app:nth-child(even){
+    background-color: red;
+} */
+
+ #app > *:nth-of-type(even){
+    background-color: slategray;
+    color: white;
+ }
+
+
+ #app > *:nth-of-type(odd){
+    background-color: steelblue;
+    color: white;
+ }
+
 .red{
     color: red;
 }
@@ -12,4 +33,6 @@
     width: 100px;
     height: 100px;
     background-color: blue;
+    margin: 10px;
+    display: inline-block;
 }

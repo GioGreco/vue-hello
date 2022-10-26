@@ -5,14 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="text/javascript" src="./lib/moment/moment.js"></script>
     <title>Hello Vue</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div id="app">
-        <h1 :class="textRed">{{message}}</h1>
-        <div>{{numArray}}</div>
-        <button @click="createSquare">crea</button>
+        <div id="test">
+            <h1 :class="textRed">{{message}}</h1>
+            <button class="btn btn-dark text-uppercase align-top" @click="createSquare">crea</button>
+        </div>
+
+        <div id="bonus" class="d-flex justify-content-center align-items-center p-3">
+            <div class="h-100 w-25">
+                <img :src="img" :alt="imgInfo" class="h-100 w-100">
+            </div>
+        </div>
+
+        <div id="model" class="d-flex">
+            <div class="date h-100 w-25 d-flex justify-content-center align-items-center p-5">
+                <input class="form-control" type="date" v-model="date">
+            </div>
+            <div class="printDate h-100 w-75 d-flex justify-content-center align-items-center">
+                <h2>{{parsedDate(date)}}</h2>
+            </div>
+        </div>
+    
     </div>
 
     <script type="text/javascript" src="./js/script.js"></script>

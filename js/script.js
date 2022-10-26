@@ -7,15 +7,22 @@ createApp({
         return{
             message : 'Hello Vue!',
             textRed : 'red',
-            numArray: [23, 45, 54],
+            date: '2022-10-26',
+            img: 'https://picsum.photos/300',
+            imgInfo: 'Random pic'
         }
     },
     methods: {
         createSquare(){
-            const appVue = document.getElementById('app');
+            const test = document.getElementById('test');
             const square = document.createElement('div');
             square.className = 'square';
-            appVue.append(square);
+            test.append(square);
+        },
+        parsedDate(time){
+            const dateP = moment(time, "YYYY-MM-DD").format("Do MMMM YYYY");
+            return dateP
         }
     }
 }).mount('#app')
+
