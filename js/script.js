@@ -7,9 +7,10 @@ createApp({
         return{
             message : 'Hello Vue!',
             textRed : 'red',
-            date: '2022-10-26',
+            date: new Date(),
             img: 'https://picsum.photos/300',
-            imgInfo: 'Random pic'
+            imgInfo: 'Random pic',
+            checked: []
         }
     },
     methods: {
@@ -25,4 +26,3 @@ createApp({
         }
     }
 }).mount('#app')
-

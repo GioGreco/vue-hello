@@ -31,6 +31,21 @@
                 <h2>{{parsedDate(date)}}</h2>
             </div>
         </div>
+
+        <div id="test-if" class="d-flex">
+            <div class="form-check w-25 h-100 d-flex flex-column justify-content-center align-items-center">
+                <label class="form-check-label" for="checkSx">Rosso</label>
+                <input class="form-check-input" value="sx" type="checkbox" id="checkSx" v-model="checked">
+                <label class="form-check-label" for="checkDx">Azzurro</label>
+                <input class="form-check-input" value="dx" type="checkbox" id="checkDx" v-model="checked">
+            </div>
+           <div class="w-75 h-100 d-flex justify-content-center align-items-center">
+            <div class="w-25 h-75 sxsx" v-if="checked.includes('sx')"></div>
+            <div class="w-25 h-75 dxdx" v-if="checked.includes('dx')"></div>
+           </div>
+        </div>
+
+
     
     </div>
 
