@@ -10,7 +10,9 @@
 </head>
 <body>
     <div id="app">
-        <h1>{{message}}</h1>
+        <h1 :class="textRed">{{message}}</h1>
+        <div>{{numArray}}</div>
+        <button @click="createSquare">crea</button>
     </div>
 
     <script type="text/javascript" src="./js/script.js"></script>
